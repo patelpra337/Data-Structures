@@ -25,3 +25,17 @@ class LinkedList:
         else:
             self.tail.set_next(new_node)
             self.tail = new_node
+
+def remove_head(self):
+    if not self.head:
+        return None
+    
+    removed_value = self.head.get_value()
+    self.head = self.head.next
+    if not self.head:
+        self.tail = None
+    return removed_value
+
+def remove_tail(self):
+    if not self.tail:
+        return None
