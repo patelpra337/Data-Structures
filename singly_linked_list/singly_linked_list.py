@@ -12,6 +12,9 @@ class Node:
     def set_next(self, new_next):
         self.next = new_next
 
+    def __str__(self):
+        return self.value
+
 
 class LinkedList:
     def __init__(self):
@@ -45,7 +48,7 @@ class LinkedList:
             return head.get_value()
 
         value = self.head.get_value()
-        self.head = self.head.get.next()
+        self.head = self.head.get_next()
         return value
 
     def remove_tail(self):
@@ -67,7 +70,6 @@ class LinkedList:
             self.tail = current
             return value
 
-
     def contains_self(self, value):
         if not self.head:
             return False
@@ -78,7 +80,6 @@ class LinkedList:
                 return True
                 current = current.get_next()
                 return False
-
 
     def get_max(self):
         max_value = self.head.get_value()
